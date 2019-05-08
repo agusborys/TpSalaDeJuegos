@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>{{titulo}}</h2>
+
+<mat-dialog-content >
+ {{titulo1}} {{ganadas}}
+ <br>
+ {{titulo2}} {{perdidas}}
+ <br>
+ {{titulo3}} {{empatadas}}
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button class="mat-raised-button"(click)="IrAlMenu()">Ir al menu</button>
+    <button class="mat-raised-button mat-primary"(click)="Jugar()">Volver a jugar</button>
+</mat-dialog-actions>

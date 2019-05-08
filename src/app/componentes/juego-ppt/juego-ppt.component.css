@@ -1,0 +1,42 @@
+.usuario-card {
+    /* max-width: 400px; */
+    /* margin-left: 10px; */
+    /* margin-top: 10px; */
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    z-index:100;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+    color: #3F51B5;
+  }
+
+  .maquina-card {
+    /* max-width: 400px; */
+    /* margin-left: 20px; */
+    /* margin-top: 10px; */
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px; 
+  }
+
+  .divider{
+    max-width:190px;
+  }
+  .foto{
+    /*margin-left: 25px;*/
+    position: relative;
+    padding-top: 0px;
+    padding-right: 50px;
+    padding-bottom: 0px;
+    padding-left: 50px;
+    display: flex;
+    justify-content: center;
+    
+  }

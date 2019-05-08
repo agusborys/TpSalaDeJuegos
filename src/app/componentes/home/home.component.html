@@ -1,0 +1,120 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Inicio</h1>
+  <mat-grid-list cols="2" rowHeight="50px">
+    <mat-grid-tile colspan="2" rowspan="5">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            <h1 class="mat-h1">Bienvenido a la Sala de Juegos de Agustin Borys</h1>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content class="dashboard-card-content">
+          <div ><h3 class="mat-h3">En esta sala de juegos encontraras diferentes desafios para probar
+            tu destreza. Son juegos clasicos y divertidos donde tendrás que demostrar lo mejor que tienes.
+            <br>El juego Adivina la marca es una creación propia donde tienes que adivinar una marca de una
+            empresa a partir de una foto. Soy un estudiante de la UTN FRA de la tecnicatura en programación.
+            ¡Que te diviertas!
+          </h3></div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="8">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            <h1 class="mat-h1">Adivina la marca</h1>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <br>
+        <div id="foto">
+            <img id="imgOp" src="../../../assets/imgs/marcas.jpg" width="450px" height="150px"> 
+        </div>
+        <br>
+        <mat-card-content class="dashboard-card-content">
+          <div style="font-size:13px">En este juego se pondrá a prueba tu conocimiento capitalista, donde se mostrará 
+            la imagen de una marca y deberás adivinar, dentro de las 4 opciones posibles, el nombre de 
+            la marca en la foto. Tienes 3 vidas para 3 partidas. ¿Te animas?
+          </div>
+            <mat-divider></mat-divider>
+            <br>
+            <a mat-flat-button color="primary" style="margin-left:5%" routerLink='/juegos/adivinaLaMarca'>¡Jugar!</a>
+          
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+      <mat-grid-tile colspan="1" rowspan="8">
+        <mat-card class="dashboard-card">
+          <mat-card-header>
+            <mat-card-title>
+              <h1 class="mat-h1">Piedra, papel o tijera</h1>
+            </mat-card-title>
+          </mat-card-header>
+          <mat-divider></mat-divider>
+          <br>
+          <div id="foto">
+              <img id="imgOp" src="../../../assets/imgs/Pedrapapaeltijera.png" width="450px" height="150px" > 
+          </div>
+          <br>
+          <mat-card-content class="dashboard-card-content">
+            <div>El clasico juego de piedra, papel o tijera. Tendrás que enfrentarte ante la
+              poderosa computadora en un duelo que ganará el mejor de 5 partidas. ¿Podrás ganarle?
+            </div>
+            <mat-divider></mat-divider>
+            <br>
+            <a mat-flat-button style="margin-left:5%" color="primary" routerLink='/juegos/PiedraPapelTijera'>¡Jugar!</a>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="8">
+          <mat-card class="dashboard-card">
+            <mat-card-header>
+              <mat-card-title>
+                <h1 class="mat-h1">Adivina el numero</h1>
+              </mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <br>
+            <div id="foto">
+              <img id="imgOp" src="../../../assets/imgs/adivinaNum.jpg" width="450px" height="150px">
+            </div>
+            <br>
+            <mat-card-content class="dashboard-card-content">
+              <div>Un juego para demostrar tus habilidades y estrategias en las adivinanzas para
+                elegir un número. La maquina tiene un número aleatorio secreto y tú tienes que adivinarlo en la
+                menor cantidad de intentos posibles, ¿Podrás hacerlo?
+                
+              </div>
+              <mat-divider></mat-divider>
+              <br>
+              <a mat-flat-button style="margin-left:5%" color="primary" routerLink='/juegos/adivinaNumero'>¡Jugar!</a>
+            </mat-card-content>
+          </mat-card>
+        </mat-grid-tile>
+          <mat-grid-tile colspan="1" rowspan="8">
+            <mat-card class="dashboard-card">
+              <mat-card-header>
+                <mat-card-title>
+                  <h1 class="mat-h1">Agilidad aritmetica</h1>
+                </mat-card-title>
+              </mat-card-header>
+              <mat-divider></mat-divider>
+              <br>
+                <div id="foto">
+                  <img id="imgOp" src="../../../assets/imgs/ecuaciones.jpg" width="450px" height="150px">
+                </div>
+                <br>
+              <mat-card-content class="dashboard-card-content">
+                <div>Este juego va a hacer que demuestres tu velocidad y precision a la hora de hacer cuentas.
+                  Tienes que realizar 5 cuentas y resolverlas en menos de 7 segundos, si la mayoría estan bien, ganas
+                  si no, pierdes. ¿Erez capaz de hacerlo?
+                </div>
+                <mat-divider></mat-divider>
+                <br>
+                <a mat-flat-button style="margin-left:5%" color="primary" routerLink='/juegos/agilidadAritmetica'>¡Jugar!</a>
+              </mat-card-content>
+            </mat-card>
+          </mat-grid-tile>
+  </mat-grid-list>
+</div>

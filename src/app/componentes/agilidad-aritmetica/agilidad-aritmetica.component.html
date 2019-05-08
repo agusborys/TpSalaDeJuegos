@@ -1,0 +1,43 @@
+<mat-grid-list cols="1" rowHeight="110px">
+    <mat-grid-tile >
+      <mat-card style="background-color:#ECEFF1;">
+          <h1 class="mat-h1" style="text-align:center;">Agilidad Aritmetica</h1>
+          <mat-card-subtitle style="text-align:center;">5 Juegos, 7 segundos</mat-card-subtitle>
+        </mat-card>
+    </mat-grid-tile>
+  <mat-grid-tile rowspan="4">
+    <mat-card class="usuario-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"><i class="material-icons">account_circle</i></div>
+        <mat-card-title flex="40"><h1 class="mat-h1">Usuario</h1></mat-card-title>
+        <div  style="color: #3F51B5"><h2 class="mat-h2">- Jugadas: - Tiempo: </h2></div>
+      </mat-card-header>
+      <h2 class="mat-h2">Realice la cuenta lo mas rápido posible</h2>
+      <mat-divider></mat-divider>
+      <br>
+      <div>
+        <button mat-raised-button color="primary" style="width:100%" >Generar Juego</button>
+      </div>
+      <br><mat-divider></mat-divider>
+      <mat-card-content><!--centrar contenido: style="display:flex; justify-content:center; align-items:center;"-->
+        <div>
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <label style="font-size:16px"> Ingrese su número:</label>
+              <br><br>
+              <input type="number" matInput style="font-size:16px"  name="numIngresado">
+            </mat-form-field>   
+          </form>     
+        </div>
+        <div id="resultado" class="foto" >
+            <img id="imgOp"  width="50px" height="50px" hidden> 
+            <h3></h3>
+        </div>
+      </mat-card-content>
+      <mat-divider></mat-divider>
+      <mat-card-actions style="display:flex; justify-content:center; align-items:center;">
+          <button mat-raised-button style="width:150px" color="primary" >Verificar</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+  </mat-grid-list>
