@@ -46,7 +46,7 @@ export class JuegoPptComponent implements OnInit {
      this.imgEleccionUsuario = "../../../assets/imgs/"+jugadaUsuario+".jpeg";
      this.imgEleccionMaquina = "../../../assets/imgs/"+this.eleccionMaq+".jpeg";
      this.partidasJugadas++;
-     console.log(this.partidasJugadas);
+     //console.log(this.partidasJugadas);
      if(this.nuevoJuego.eleccionMaquina == this.nuevoJuego.eleccionUsuario)
      {
       //  this.puntajeMaquina++;
@@ -102,6 +102,8 @@ export class JuegoPptComponent implements OnInit {
      }
      if(this.partidasJugadas == 5)
      {
+      document.getElementById("imgUsu").hidden = true;
+      document.getElementById("imgMaq").hidden = true;
        if(this.puntajeUsuario>this.puntajeMaquina)
        {
          this.resultado = "Ganaste :D";
@@ -131,20 +133,23 @@ export class JuegoPptComponent implements OnInit {
         }
         this.dialog.open(ContenidoDialogComponent, dialogConfig);
         this.dialog.afterAllClosed.subscribe(result=>{
-          this.puntajeMaquina = 0;
-          this.puntajeUsuario = 0;
-          document.getElementById("imgUsu").hidden = true;
-          document.getElementById("imgMaq").hidden = true;
-          this.imgEleccionMaquina="";
-          this.imgEleccionUsuario="";
-          this.partidasJugadas=0;
-          this.ganadas = 0;
-          this.perdidas = 0;
-          this.empatadas = 0;
-        })
+          this.FinJuego();
+        });
       }
    }
 
+   FinJuego()
+   {
+      this.puntajeMaquina = 0;
+      this.puntajeUsuario = 0;
+      
+      this.imgEleccionMaquina="";
+      this.imgEleccionUsuario="";
+      this.partidasJugadas=0;
+      this.ganadas = 0;
+      this.perdidas = 0;
+      this.empatadas = 0;
+   }
   ngOnInit() {
     
   }

@@ -1,7 +1,8 @@
 <div class="grid-container">
   <h1 class="mat-h1">Inicio</h1>
-  <mat-grid-list cols="2" rowHeight="50px">
-    <mat-grid-tile colspan="2" rowspan="5">
+  <mat-grid-list [cols]="breakpoint" rowHeight="50px" (window:resize)="onResize($event)"> 
+    <!-- cols="2" rowHeight="50px"  -->
+    <mat-grid-tile [colspan]="colIntro"  [rowspan]="rowIntro">
       <mat-card class="dashboard-card">
         <mat-card-header>
           <mat-card-title>

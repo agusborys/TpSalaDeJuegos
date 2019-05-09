@@ -5,38 +5,52 @@
           <mat-card-subtitle style="text-align:center;">5 Juegos, 7 segundos</mat-card-subtitle>
         </mat-card>
     </mat-grid-tile>
-  <mat-grid-tile rowspan="4">
+  <mat-grid-tile rowspan="6">
     <mat-card class="usuario-card">
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"><i class="material-icons">account_circle</i></div>
         <mat-card-title flex="40"><h1 class="mat-h1">Usuario</h1></mat-card-title>
-        <div  style="color: #3F51B5"><h2 class="mat-h2">- Jugadas: - Tiempo: </h2></div>
+        <div  style="color: #3F51B5"><h2 class="mat-h2">- Jugadas:{{jugadas}} - Tiempo:{{cuentaAtras}} </h2></div>
       </mat-card-header>
       <h2 class="mat-h2">Realice la cuenta lo mas rápido posible</h2>
       <mat-divider></mat-divider>
       <br>
       <div>
-        <button mat-raised-button color="primary" style="width:100%" >Generar Juego</button>
+        <button mat-raised-button id="btnGen" color="primary" style="width:100%" (click)="IniciarJuego()">Generar Juego</button>
       </div>
       <br><mat-divider></mat-divider>
       <mat-card-content><!--centrar contenido: style="display:flex; justify-content:center; align-items:center;"-->
         <div>
+            <mat-list role="list">
+                <mat-list-item role="listitem">
+                  <i class="material-icons">label_important</i>&nbsp;&nbsp;&nbsp;
+                  <h3>{{this.nuevoJuego.numeroUno}}</h3>
+                  </mat-list-item>
+                <mat-list-item role="listitem">
+                    <i class="material-icons">label_important</i>&nbsp;&nbsp;&nbsp;
+                    <h3>{{this.nuevoJuego.operador}}</h3>
+                </mat-list-item>
+                <mat-list-item role="listitem">
+                    <i class="material-icons">label_important</i>&nbsp;&nbsp;&nbsp;
+                    <h3>{{this.nuevoJuego.numeroDos}}</h3>
+                </mat-list-item>
+              </mat-list>
           <form class="example-form">
             <mat-form-field class="example-full-width">
-              <label style="font-size:16px"> Ingrese su número:</label>
+              <label style="font-size:16px"> Respuesta:</label>
               <br><br>
-              <input type="number" matInput style="font-size:16px"  name="numIngresado">
+              <input type="number" matInput style="font-size:16px" [(ngModel)]="nuevoJuego.resultadoJugador" id="numIngresado"  name="numIngresado">
             </mat-form-field>   
           </form>     
         </div>
         <div id="resultado" class="foto" >
-            <img id="imgOp"  width="50px" height="50px" hidden> 
-            <h3></h3>
+            <img id="imgOp" [src]="foto"  width="50px" height="50px" hidden> 
+            <h3 id="msj" hidden>{{mensaje}} {{this.nuevoJuego.resultadoVerdadero}}</h3>
         </div>
       </mat-card-content>
       <mat-divider></mat-divider>
       <mat-card-actions style="display:flex; justify-content:center; align-items:center;">
-          <button mat-raised-button style="width:150px" color="primary" >Verificar</button>
+          <button mat-raised-button style="width:150px" id="btnVer" color="primary" (click)="Verificar()" disabled>Verificar</button>
       </mat-card-actions>
     </mat-card>
   </mat-grid-tile>

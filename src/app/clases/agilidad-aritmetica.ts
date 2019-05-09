@@ -1,7 +1,7 @@
 export class AgilidadAritmetica {
     numeroUno:number;
     numeroDos:number;
-    operadores : Array<string> = ["+","-","*","/"];
+    operadores : Array<string> = ["+","-","*","/","+","-","*","/"];
     operador:string;
     resultadoVerdadero:number;
     resultadoJugador:number;
@@ -14,11 +14,11 @@ export class AgilidadAritmetica {
         this.resultadoJugador=0;
     }
 
-    public GenerarJuego() : number
+    public GenerarJuego() 
     {
         this.numeroUno = Math.floor((Math.random()*20)+1);
         this.numeroDos = Math.floor((Math.random()*10)+1);
-        let randOperator = Math.floor((Math.random() * 3) + 0);
+        let randOperator = Math.floor((Math.random() * 7) + 0);
         this.operador = this.operadores[randOperator];
         switch(this.operador)
         {
@@ -43,7 +43,7 @@ export class AgilidadAritmetica {
                     }
                 break;
         }
-        return this.resultadoVerdadero;
+       
     }
     public Verificar() : boolean
     {

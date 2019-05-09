@@ -24,8 +24,9 @@ export class AdivinaNumeroComponent implements OnInit {
   IniciarJuego()
   {
     this.nuevoJuego.GenerarNumero();
-    console.log(this.nuevoJuego.numeroSecreto);
+    //console.log(this.nuevoJuego.numeroSecreto);
     this.numeroGenerado = true;
+    this.mensajeAyuda = "Número generado, a jugar!";
   }
   Verificar()
   {
@@ -107,6 +108,7 @@ export class AdivinaNumeroComponent implements OnInit {
             this.JugarDeNuevo();
           });
         }
+        document.getElementById("imgOp").hidden = true;
       }
     }
     else{
@@ -120,7 +122,6 @@ export class AdivinaNumeroComponent implements OnInit {
     this.nuevoJuego.numeroIngresado = 0;
     this.mensajeAyuda = "";
     this.nuevoJuego.intentos = 0;
-    document.getElementById("imgOp").hidden = true;
   }
 
   ngOnInit() {
